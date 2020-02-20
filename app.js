@@ -35,8 +35,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// Add routes here
+// register the control (original) condition
 app.get('/', index.view);
+app.get('/viewAlt', index.viewAlt);
 app.get('/project/:id', project.view);
 // Example route
 // app.get('/users', user.list);
